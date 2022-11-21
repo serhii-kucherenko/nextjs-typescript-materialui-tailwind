@@ -14,8 +14,10 @@ export default function RootLayout({ children }: PropsWithChildren<{}>) {
         <link rel='icon' href='/favicon.ico' />
       </head>
       <ThemeProvider theme={lightTheme}>
-        <CssBaseline />
-        <body>{children}</body>
+        <body id='__next'>
+          <CssBaseline />
+          {children}
+        </body>
       </ThemeProvider>
     </html>
   )
